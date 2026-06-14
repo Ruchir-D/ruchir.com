@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import D from '../../../data/portfolio.js';
 
 export default function BackCover({ tiltCls }) {
@@ -11,6 +12,11 @@ export default function BackCover({ tiltCls }) {
             Open to dev tools · AI infra · creative coding
           </div>
         </div>
+        <Link className="mg-create-btn" to="/create">
+          <span className="mg-create-btn-jp">作れ！</span>
+          <span className="mg-create-btn-main">CREATE YOUR OWN<br />ONE-SHOT MANGA</span>
+        </Link>
+
         <div className="mg-contact">
           <a href={`mailto:${D.contact.email}`}>
             <span className="label">Email</span>

@@ -1,6 +1,8 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { ACTIVE_DESIGN } from './config.js';
 import MangaPortfolio from './designs/manga/MangaPortfolio.jsx';
+import MangaCreator from './designs/manga/MangaCreator.jsx';
 
 const designs = {
   manga: MangaPortfolio,
@@ -8,12 +10,16 @@ const designs = {
 
 export default function App() {
   const Design = designs[ACTIVE_DESIGN];
-  if (!Design) {
-    return (
-      <div style={{ fontFamily: 'monospace', padding: 40, color: 'red' }}>
-        Unknown design: "{ACTIVE_DESIGN}". Check src/config.js.
-      </div>
-    );
-  }
-  return <Design />;
+  return (
+    <Routes>
+      <Route path="/create" element={<MangaCreator />} />
+      <Route path="*" element={
+        Design
+          ? <Design />
+          : <div style={{ fontFamily: 'monospace', padding: 40, color: 'red' }}>
+              Unknown design: "{ACTIVE_DESIGN}". Check src/config.js.
+            </div>
+      } />
+    </Routes>
+  );
 }

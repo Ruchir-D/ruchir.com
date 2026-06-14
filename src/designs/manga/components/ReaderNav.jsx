@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function ReaderNav() {
   return (
     <nav className="mg-reader-bar">
@@ -15,7 +17,10 @@ export default function ReaderNav() {
         <a href="#mg-p6">P.6 Omake</a>
         <a href="#mg-back">Back cover</a>
       </div>
-      <div>2026 · CH.01</div>
+      <Link className="mg-nav-create-btn" to="/create">
+        <span className="jp">作れ！</span>
+        CREATE YOUR MANGA
+      </Link>
     </nav>
   );
 }
