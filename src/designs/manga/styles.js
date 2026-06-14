@@ -52,6 +52,24 @@ const mangaCSS = `
 .mg-reader-bar .pages{display:flex; gap:20px;}
 .mg-reader-bar .pages a{color:#b9b2a4; text-decoration:none; transition:.15s; font-size:11px;}
 .mg-reader-bar .pages a:hover{color:var(--paper);}
+.mg-nav-create-btn{
+  display:flex; align-items:center; gap:7px;
+  padding:6px 14px;
+  background:var(--accent);
+  border:2px solid var(--paper);
+  color:var(--paper);
+  font-family:'Archivo Black',sans-serif;
+  font-size:10px; letter-spacing:.18em; text-transform:uppercase;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:.15s;
+}
+.mg-nav-create-btn:hover{background:#ff4a3c; transform:translate(-1px,-1px);}
+.mg-nav-create-btn .jp{
+  font-family:'Reggae One','Noto Sans JP',sans-serif;
+  color:var(--paper); font-size:12px; letter-spacing:.2em;
+  opacity:.85;
+}
 
 /* ============ page shell ============ */
 .mg-pagewrap{
@@ -394,6 +412,49 @@ const mangaCSS = `
 .mg-strip .koma .k-txt{font-size:11.5px; line-height:1.6; font-weight:700;}
 .mg-strip .koma .k-sub{font-size:9.5px; color:var(--ink-soft); letter-spacing:.1em;}
 
+/* ============ create-manga CTA button ============ */
+.mg-create-btn{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:6px;
+  margin:32px auto 0;
+  padding:22px 48px;
+  width:fit-content;
+  background:var(--accent);
+  border:4px solid var(--paper);
+  box-shadow:8px 8px 0 rgba(243,237,222,.18);
+  text-decoration:none;
+  color:var(--paper);
+  cursor:pointer;
+  transition:.15s;
+  position:relative;
+  overflow:hidden;
+}
+.mg-create-btn::before{
+  content:'';
+  position:absolute; inset:0; pointer-events:none;
+  background:repeating-conic-gradient(from 0deg at 50% 50%,
+    transparent 0deg 5deg,
+    rgba(255,255,255,.07) 5deg 6deg,
+    transparent 6deg 11deg);
+}
+.mg-create-btn:hover{
+  transform:translate(-3px,-3px);
+  box-shadow:11px 11px 0 rgba(243,237,222,.22);
+  background:#ff4a3c;
+}
+.mg-create-btn-jp{
+  font-family:'Reggae One','Noto Sans JP',sans-serif;
+  font-size:13px; letter-spacing:.5em;
+  opacity:.9;
+}
+.mg-create-btn-main{
+  font-family:'Archivo Black','Arial Black',sans-serif;
+  font-size:clamp(22px,3.5vw,34px);
+  line-height:1.05; letter-spacing:.04em;
+  text-transform:uppercase;
+  text-align:center;
+}
+
 /* ============ back cover / contact ============ */
 .mg-next{
   text-align:center;
@@ -546,6 +607,7 @@ const mangaCSS = `
   /* reader bar */
   .mg-reader-bar { height:52px; padding:0 16px; font-size:10px; }
   .mg-reader-bar .pages { display:none; }
+  .mg-nav-create-btn { display:none; }
   .mg-reader-bar .title .jp-label { display:none; }
 
   /* page wrap & page box */
