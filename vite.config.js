@@ -1,14 +1,14 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    include: ['@trustgate/kernel'],
+    include: [],
   },
   build: {
     commonjsOptions: {
-      include: [/@trustgate\/kernel/, /node_modules/],
+      include: [/node_modules/],
     },
   },
 });
