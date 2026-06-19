@@ -17,6 +17,10 @@ export default function ReaderNav() {
         <a href="#mg-p6">P.6 Omake</a>
         <a href="#mg-back">Back cover</a>
       </div>
+      <Link className="mg-nav-create-btn" to="/trustgate" style={{ background: 'transparent', color: 'var(--paper)', borderColor: 'rgba(243,237,222,.35)', marginRight: 8 }}>
+        <span className="jp">検査</span>
+        TRUSTGATE
+      </Link>
       <Link className="mg-nav-create-btn" to="/create">
         <span className="jp">作れ！</span>
         CREATE YOUR MANGA

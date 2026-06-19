@@ -3,9 +3,12 @@ import { Routes, Route } from 'react-router-dom';
 import { ACTIVE_DESIGN } from './config.js';
 import MangaPortfolio from './designs/manga/MangaPortfolio.jsx';
 import MangaCreator from './designs/manga/MangaCreator.jsx';
+import TrustGatePage from './designs/manga/TrustGatePage.jsx';
+import SimplePortfolio from './designs/simple/SimplePortfolio.jsx';
 
 const designs = {
   manga: MangaPortfolio,
+  simple: SimplePortfolio,
 };
 
 export default function App() {
@@ -13,6 +16,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/create" element={<MangaCreator />} />
+      <Route path="/trustgate" element={<TrustGatePage />} />
       <Route path="*" element={
         Design
           ? <Design />
