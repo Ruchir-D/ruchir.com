@@ -13,7 +13,13 @@ const DATA = {
   now: "Tech-leading AI-IDE at Qubits Education — a Module Federation microfrontend for building ML pipelines by wiring blocks together, with a team of 7 (5 engineers, 1 backend, 1 DevOps). Shipping to production this month.",
 
   // Add entries here to publish the "writing" section — it stays hidden while this is empty.
-  writingPosts: [],
+  writingPosts: [
+    {
+      title: 'Diagnosing render bottlenecks in a node-graph canvas',
+      year: '2026',
+      to: '/writing/canvas-performance',
+    },
+  ],
 
   sideQuests: [
     {

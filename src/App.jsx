@@ -4,6 +4,7 @@ import { ACTIVE_DESIGN } from "./config.js";
 import MangaPortfolio from "./designs/manga/MangaPortfolio.jsx";
 import MangaCreator from "./designs/manga/MangaCreator.jsx";
 import SimplePortfolio from "./designs/simple/SimplePortfolio.jsx";
+import CanvasPerformance from "./designs/simple/posts/CanvasPerformance.jsx";
 
 const designs = {
   manga: MangaPortfolio,
@@ -16,6 +17,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/create" element={<MangaCreator />} />
+        <Route path="/writing/canvas-performance" element={<CanvasPerformance />} />
         <Route
           path="*"
           element={
