@@ -58,10 +58,10 @@ function IndexView() {
         <Section label="// writing">
           <div style={{ marginTop: 20, display: 'flex', flexDirection: 'column', gap: 14 }}>
             {DATA.writingPosts.map((post) => (
-              <div className="s-row-sm" key={post.title}>
-                <span style={{ color: 'var(--text)', fontSize: 15 }}>{post.title}</span>
+              <Link className="s-row-sm" to={post.to} key={post.title}>
+                <span style={{ color: 'var(--link)', fontSize: 15 }}>{post.title}</span>
                 <span style={{ color: 'var(--dim)', fontSize: 12.5, whiteSpace: 'nowrap' }}>{post.year}</span>
-              </div>
+              </Link>
             ))}
           </div>
         </Section>
